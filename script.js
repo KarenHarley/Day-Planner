@@ -90,13 +90,12 @@ var array = [
     letters: "five",
     textarea: "fiveTextArea",
     hourAttr: "5",
-    hourAttr: "hour = 18",
+    hourAttr: "hour = 17",
     saveBtn: "fiveBtn",
   },
 ]; //make each one
 
 for (var i = 0; i < array.length; i++) {
- 
   var div = $(
     `<div id = ${array[i].letters} classs = "row description" ></div`
   );
@@ -111,11 +110,11 @@ for (var i = 0; i < array.length; i++) {
   div.append(hour);
   div.append(textarea);
   div.append(saveBtn);
-//this instead of 
+  //i would like to do something like this instead of what is on lines 270 onwards
   var current = moment().hours();
 
   console.log(current);
-  
+
   if (current === array[i].hourAttr) {
     array[i].letters.addClass("present");
     console.log("time its 5");
@@ -125,7 +124,8 @@ for (var i = 0; i < array.length; i++) {
   } else if (current < array[i].hourAttr) {
     array[i].letters.addClass("future");
     console.log(array[i].hourAttr + "greater than current");
-//this 
+    //this
+    //i dont want to have to make a function for each one (repeated code)
     /*
     checkTimeForFive();
 function checkTimeForFive() {
@@ -266,3 +266,22 @@ fiveBtn.on("click", function () {
 
   console.log(localStorage.getItem("UserInput5pm"));
 });
+
+checkTimeForFive();
+function checkTimeForFive() {
+  var hour = parseInt($("#fiveTextArea").attr("hour"));
+  console.log(hour);
+  //var current = moment().hours();
+
+  console.log(current);
+  if (current === hour) {
+    $("#five").addClass("present");
+    console.log("time its 5");
+  } else if (current > hour) {
+    $("#five").addClass("past");
+    console.log(hour + " is less than current" + current);
+  } else if (current < hour) {
+    $("#five").addClass("future");
+    console.log(hour + "greater than current");
+  }
+}
