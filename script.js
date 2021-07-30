@@ -65,7 +65,7 @@ var array = [
     num: 2,
     letters: "two",
     textarea: "twoTextArea",
-    hourAttr: "2",
+
     hourAttr: "hour = 14",
     saveBtn: "twoBtn",
   },
@@ -73,7 +73,7 @@ var array = [
     num: 3,
     letters: "three",
     textarea: "threeTextArea",
-    hourAttr: "3",
+
     hourAttr: "hour = 15",
     saveBtn: "threeBtn",
   },
@@ -81,7 +81,7 @@ var array = [
     num: 4,
     letters: "four",
     textarea: "fourTextArea",
-    hourAttr: "4",
+
     hourAttr: "hour = 16",
     saveBtn: "fourBtn",
   },
@@ -89,20 +89,18 @@ var array = [
     num: 5,
     letters: "five",
     textarea: "fiveTextArea",
-    hourAttr: "5",
+
     hourAttr: "hour = 17",
     saveBtn: "fiveBtn",
   },
 ]; //make each one
 
 for (var i = 0; i < array.length; i++) {
-  var div = $(
-    `<div id = ${array[i].letters} classs = "row description" ></div`
-  );
+  var div = $(`<div id = ${array[i].letters} class = "row time-block" ></div`);
 
-  var hour = $(`<h3>${array[i].num}</h3>`);
+  var hour = $(`<h3 class ="">${array[i].num}</h3>`);
   var textarea = $(
-    `<textarea id =${array[i].textarea} ${array[i].hourAttr}></textarea>`
+    `<textarea class = "description" id =${array[i].textarea} ${array[i].hourAttr}></textarea>`
   );
   var saveBtn = $(`<button id = ${array[i].saveBtn}  class = "saveBtn">`);
 
@@ -110,43 +108,6 @@ for (var i = 0; i < array.length; i++) {
   div.append(hour);
   div.append(textarea);
   div.append(saveBtn);
-  //i would like to do something like this instead of what is on lines 270 onwards
-  var current = moment().hours();
-
-  console.log(current);
-
-  if (current === array[i].hourAttr) {
-    array[i].letters.addClass("present");
-    console.log("time its 5");
-  } else if (current > array[i].hourAttr) {
-    array[i].letters.addClass("past");
-    console.log(array[i].hourAttr + " is less than current" + current);
-  } else if (current < array[i].hourAttr) {
-    array[i].letters.addClass("future");
-    console.log(array[i].hourAttr + "greater than current");
-    //this
-    //i dont want to have to make a function for each one (repeated code)
-    /*
-    checkTimeForFive();
-function checkTimeForFive() {
-  var hour = parseInt($("#fiveTextArea").attr("hour"));
-  console.log(hour);
-  //var current = moment().hours();
-
-  console.log(current);
-  if (current === hour) {
-    $("#five").addClass("present");
-    console.log("time its 5");
-  } else if (current > hour) {
-    $("#five").addClass("past");
-    console.log(hour + " is less than current" + current);
-  } else if (current < hour) {
-    $("#five").addClass("future");
-    console.log(hour + "greater than current");
-  }
-}
-    */
-  }
 }
 
 //storing text (event listeners)
@@ -266,6 +227,11 @@ fiveBtn.on("click", function () {
 
   console.log(localStorage.getItem("UserInput5pm"));
 });
+
+//check time
+var current = moment().hours();
+
+console.log(current);
 
 checkTimeForFive();
 function checkTimeForFive() {
