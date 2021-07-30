@@ -232,7 +232,7 @@ fiveBtn.on("click", function () {
 var current = moment().hours();
 
 console.log(current);
-
+/*
 checkTimeForFive();
 function checkTimeForFive() {
   var hour = parseInt($("#fiveTextArea").attr("hour"));
@@ -249,5 +249,25 @@ function checkTimeForFive() {
   } else if (current < hour) {
     $("#five").addClass("future");
     console.log(hour + "greater than current");
+  }
+}
+*/
+checkTime();
+function checkTime() {
+  var elements = document.getElementsByClassName("row");
+  for (var i = 0; i < elements.length; i++) {
+    console.log(elements[i]);
+    if (elements.hourAttr === current) {
+      // elements[i].classList.add("present");
+      $(elements[i]).addClass(present);
+    } else if (elements.hourAttr > current) {
+      //elements[i].classList.add("past");
+      $(this).addClass(past);
+    } else if (elements.hourAttr < current) {
+      //elements[i].classList.add("future");
+      $("row").addClass(future);
+    } else {
+      console.log("error");
+    }
   }
 }
