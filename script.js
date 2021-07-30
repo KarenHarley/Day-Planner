@@ -16,15 +16,7 @@ function time() {
   $("#currentDay").text(today.format("dddd[, ]MMM Do[remove this] h:mm:ss a "));
 }
 setInterval(time, 1000); //this keeps time running
-//current is for the current time but just the hour
-var current = moment().hours();
 
-//function timeChange() {
-//   current
-//}
-//setInterval(timeChange, 1000);
-
-//creating the hours
 var array = [
   {
     num: 9,
@@ -254,18 +246,18 @@ function checkTimeForFive() {
 */
 checkTime();
 function checkTime() {
-  var elements = document.getElementsByClassName("row");
+  var elements = document.getElementsByClassName("description"); //change based on css
   for (var i = 0; i < elements.length; i++) {
     console.log(elements[i]);
-    if (elements.hourAttr === current) {
+    if (elements[i].getAttribute("hour") == current) {
       // elements[i].classList.add("present");
-      $(elements[i]).addClass(present);
-    } else if (elements.hourAttr > current) {
+      $(elements[i]).addClass("present");
+    } else if (elements[i].getAttribute("hour") < current) {
       //elements[i].classList.add("past");
-      $(this).addClass(past);
-    } else if (elements.hourAttr < current) {
+      $(elements[i]).addClass("past");
+    } else if (elements[i].getAttribute("hour") > current) {
       //elements[i].classList.add("future");
-      $("row").addClass(future);
+      $(elements[i]).addClass("future");
     } else {
       console.log("error");
     }
