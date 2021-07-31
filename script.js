@@ -13,48 +13,48 @@ console.log(localStorage.getItem("UserInput5pm"));
 
 function time() {
   var today = moment(); //moment is time.now
-  $("#currentDay").text(today.format("dddd[, ]MMM Do[remove this] h:mm:ss a "));
+  $("#currentDay").text(today.format("dddd[, ]MMM Do"));
 }
 setInterval(time, 1000); //this keeps time running
 
 var array = [
   {
-    num: 9,
+    num: "9 AM",
     letters: "nine",
     textarea: "nineTextArea",
     hourAttr: "hour = 9",
     saveBtn: "nineBtn",
   },
   {
-    num: 10,
+    num: "10 AM",
     letters: "ten",
     textarea: "tenTextArea",
     hourAttr: "hour = 10",
     saveBtn: "tenBtn",
   },
   {
-    num: 11,
+    num: "11 AM",
     letters: "eleven",
     textarea: "elevenTextArea",
     hourAttr: "hour = 11",
     saveBtn: "elevenBtn",
   },
   {
-    num: 12,
+    num: "12 PM",
     letters: "twelve",
     textarea: "twelveTextArea",
     hourAttr: "hour = 12",
     saveBtn: "twelveBtn",
   },
   {
-    num: 1,
+    num: "1 PM",
     letters: "one",
     textarea: "oneTextArea",
     hourAttr: "hour = 13",
     saveBtn: "oneBtn",
   },
   {
-    num: 2,
+    num: "2 PM",
     letters: "two",
     textarea: "twoTextArea",
 
@@ -62,7 +62,7 @@ var array = [
     saveBtn: "twoBtn",
   },
   {
-    num: 3,
+    num: "3 PM",
     letters: "three",
     textarea: "threeTextArea",
 
@@ -70,7 +70,7 @@ var array = [
     saveBtn: "threeBtn",
   },
   {
-    num: 4,
+    num: "4 PM",
     letters: "four",
     textarea: "fourTextArea",
 
@@ -78,7 +78,7 @@ var array = [
     saveBtn: "fourBtn",
   },
   {
-    num: 5,
+    num: "5 PM",
     letters: "five",
     textarea: "fiveTextArea",
 
@@ -90,11 +90,13 @@ var array = [
 for (var i = 0; i < array.length; i++) {
   var div = $(`<div id = ${array[i].letters} class = "row time-block" ></div`);
 
-  var hour = $(`<h3 class ="">${array[i].num}</h3>`);
+  var hour = $(`<h3 class =" hour col-2">${array[i].num}</h3>`);
   var textarea = $(
-    `<textarea class = "description" id =${array[i].textarea} ${array[i].hourAttr}></textarea>`
+    `<textarea class = "description col-9" id =${array[i].textarea} ${array[i].hourAttr}></textarea>`
   );
-  var saveBtn = $(`<button id = ${array[i].saveBtn}  class = "saveBtn">`);
+  var saveBtn = $(
+    `<button id = ${array[i].saveBtn}  class = "saveBtn col-1" ><i class="fas fa-lock"></i>`
+  );
 
   container.append(div);
   div.append(hour);
@@ -224,26 +226,7 @@ fiveBtn.on("click", function () {
 var current = moment().hours();
 
 console.log(current);
-/*
-checkTimeForFive();
-function checkTimeForFive() {
-  var hour = parseInt($("#fiveTextArea").attr("hour"));
-  console.log(hour);
-  //var current = moment().hours();
 
-  console.log(current);
-  if (current === hour) {
-    $("#five").addClass("present");
-    console.log("time its 5");
-  } else if (current > hour) {
-    $("#five").addClass("past");
-    console.log(hour + " is less than current" + current);
-  } else if (current < hour) {
-    $("#five").addClass("future");
-    console.log(hour + "greater than current");
-  }
-}
-*/
 checkTime();
 function checkTime() {
   var elements = document.getElementsByClassName("description"); //change based on css

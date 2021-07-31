@@ -1,5 +1,5 @@
 body {
-  font-family: 'Open Sans', sans-serif;
+  font-family: "Open Sans", sans-serif;
   font-size: 16px;
   line-height: 1;
 }
@@ -40,6 +40,7 @@ textarea {
   background-color: #ffffff;
   color: #000000;
   border-top: 1px dashed #000000;
+  padding-top: 10px;
 }
 
 .past {
@@ -63,8 +64,13 @@ textarea {
   border-bottom-right-radius: 15px;
   background-color: #06aed5;
   color: white;
+  
+  
   font-family: "Font Awesome 5 Free";
-  content: "\f3c1" ;
+  font-style: normal;
+  font-weight: 400; /* 900 soild 400 line one*/
+  content: "\f3c1";
+ 
 }
 
 .saveBtn i:hover {
