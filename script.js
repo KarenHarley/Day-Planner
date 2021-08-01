@@ -1,14 +1,5 @@
 var container = $(".container");
 
-console.log(localStorage.getItem("UserInput9am"));
-console.log(localStorage.getItem("UserInput10am"));
-console.log(localStorage.getItem("UserInput11am"));
-console.log(localStorage.getItem("UserInput12pm"));
-console.log(localStorage.getItem("UserInput1pm"));
-console.log(localStorage.getItem("UserInput2pm"));
-console.log(localStorage.getItem("UserInput3pm"));
-console.log(localStorage.getItem("UserInput4pm"));
-console.log(localStorage.getItem("UserInput5pm"));
 //this displays the day of the week and month + day
 
 function time() {
@@ -88,12 +79,17 @@ var array = [
 ]; //make each one
 
 for (var i = 0; i < array.length; i++) {
+
+   var storedData = localStorage.getItem("UserInput"+array[i].num.replace(/ /g,""))
+  //var storedData = array[i].num.replace(/ /g,"")
+    console.log(storedData)
   var div = $(`<div id = ${array[i].letters} class = "row time-block" ></div`);
 
   var hour = $(`<h3 class =" hour col-2">${array[i].num}</h3>`);
   var textarea = $(
     `<textarea class = "description col-9" id =${array[i].textarea} ${array[i].hourAttr}></textarea>`
   );
+  textarea.val(storedData)
   var saveBtn = $(
     `<button id = ${array[i].saveBtn}  class = "saveBtn col-1" ><i class="fas fa-lock"></i>`
   );
@@ -115,9 +111,9 @@ nineBtn.on("click", function () {
   //var input = document.querySelector("#nineTextArea").value;
   var input = (nineTextAreaForInput.innerHTML = $("#nineTextArea").val());
   //var input = $("#nineTextArea").val();
-  localStorage.setItem("UserInput9am", input);
+  localStorage.setItem("UserInput9AM", input);
 
-  console.log(localStorage.getItem("UserInput9am"));
+  console.log(localStorage.getItem("UserInput9AM"));
 });
 
 //10 am
@@ -129,9 +125,9 @@ tenBtn.on("click", function () {
   console.log("button works");
 
   var input = $("#tenTextArea").val();
-  localStorage.setItem("UserInput10am", input);
+  localStorage.setItem("UserInput10AM", input);
 
-  console.log(localStorage.getItem("UserInput10am"));
+  console.log(localStorage.getItem("UserInput10AM"));
 });
 // 11 am
 
@@ -142,9 +138,9 @@ elevenBtn.on("click", function () {
   console.log("button works");
 
   var input = $("#elevenTextArea").val();
-  localStorage.setItem("UserInput11am", input);
+  localStorage.setItem("UserInput11AM", input);
 
-  console.log(localStorage.getItem("UserInput11am"));
+  console.log(localStorage.getItem("UserInput11AM"));
 });
 //12 pm
 var twelveBtn = $("#twelveBtn");
@@ -154,9 +150,9 @@ twelveBtn.on("click", function () {
   console.log("button works");
 
   var input = $("#twelveTextArea").val();
-  localStorage.setItem("UserInput12pm", input);
+  localStorage.setItem("UserInput12PM", input);
 
-  console.log(localStorage.getItem("UserInput12pm"));
+  console.log(localStorage.getItem("UserInput12PM"));
 });
 
 //1 pm
@@ -168,9 +164,9 @@ oneBtn.on("click", function () {
   console.log("button works");
 
   var input = $("#oneTextArea").val();
-  localStorage.setItem("UserInput1pm", input);
+  localStorage.setItem("UserInput1PM", input);
 
-  console.log(localStorage.getItem("UserInput1pm"));
+  console.log(localStorage.getItem("UserInput1PM"));
 });
 //2 pm
 var twoBtn = $("#twoBtn");
@@ -180,9 +176,9 @@ twoBtn.on("click", function () {
   console.log("button works");
 
   var input = $("#twoTextArea").val();
-  localStorage.setItem("UserInput2pm", input);
+  localStorage.setItem("UserInput2PM", input);
 
-  console.log(localStorage.getItem("UserInput2pm"));
+  console.log(localStorage.getItem("UserInput2PM"));
 });
 // 3 pm
 var threeBtn = $("#threeBtn");
@@ -192,9 +188,9 @@ threeBtn.on("click", function () {
   console.log("button works");
 
   var input = $("#threeTextArea").val();
-  localStorage.setItem("UserInput3pm", input);
+  localStorage.setItem("UserInput3PM", input);
 
-  console.log(localStorage.getItem("UserInput3pm"));
+  console.log(localStorage.getItem("UserInput3PM"));
 });
 //4 pm
 
@@ -205,9 +201,9 @@ fourBtn.on("click", function () {
   console.log("button works");
 
   var input = $("#fourTextArea").val();
-  localStorage.setItem("UserInput4pm", input);
+  localStorage.setItem("UserInput4PM", input);
 
-  console.log(localStorage.getItem("UserInput4pm"));
+  console.log(localStorage.getItem("UserInput4PM"));
 });
 //5 pm
 var fiveBtn = $("#fiveBtn");
@@ -217,9 +213,9 @@ fiveBtn.on("click", function () {
   console.log("button works");
 
   var input = $("#fiveTextArea").val();
-  localStorage.setItem("UserInput5pm", input);
+  localStorage.setItem("UserInput5PM", input);
 
-  console.log(localStorage.getItem("UserInput5pm"));
+  console.log(localStorage.getItem("UserInput5PM"));
 });
 
 //check time
