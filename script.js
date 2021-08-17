@@ -8,6 +8,7 @@ function time() {
 }
 setInterval(time, 1000); //this keeps time running
 
+//the hours
 var array = [
   {
     num: "9 AM",
