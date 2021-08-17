@@ -3,7 +3,7 @@
 ## Plan and organize your schedule with this helpful tool!
 
 ## Features:
- This Scheduler is color coded to easily identify the current, future and past hours
+ This Scheduler is color coded to easily identify the current, future and past hours.
 
 
  #### Current Hours:
@@ -31,6 +31,12 @@
  2. Click the blue button with the lock to store the text.
 
  Note: If the blue button is not pressed the text will NOT be stored.
+
+# Tecnologies used
+
+1. jQuery
+2. CSS
+3. HTML
 
  # Website 
  ![full webpage](./pics/webPic.png)
