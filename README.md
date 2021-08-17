@@ -32,6 +32,10 @@
 
  Note: If the blue button is not pressed the text will NOT be stored.
 
+# Tecnologies used
+-jquery
+-css
+-html
  # Website 
  ![full webpage](./pics/webPic.png)
 
