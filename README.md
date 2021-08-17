@@ -41,8 +41,8 @@
 
 #### Github
 
-https://github.com/KarenHarley/05-Homework
+https://github.com/KarenHarley/Day-Planner
 
 #### Website
 
-https://karenharley.github.io/05-Homework/
+https://karenharley.github.io/Day-Planner/
