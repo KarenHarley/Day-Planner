@@ -32,7 +32,7 @@
 
  Note: If the blue button is not pressed the text will NOT be stored.
 
-# Tecnologies used
+# Technologies used
 
 1. jQuery
 2. CSS
