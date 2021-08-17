@@ -3,7 +3,7 @@
 ## Plan and organize your schedule with this helpful tool!
 
 ## Features:
- This Scheduler is color coded to easily identify the current, future and past hours
+ This Scheduler is color coded to easily identify the current, future and past hours.
 
 
  #### Current Hours:
