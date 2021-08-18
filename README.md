@@ -41,6 +41,10 @@
  # Website 
  ![full webpage](./pics/webPic.png)
 
+## Contact Info 
+
+KarenHarley88@gmail.com
+ 
 
  ### Links
  
@@ -52,3 +56,5 @@ https://github.com/KarenHarley/Day-Planner
 #### Website
 
 https://karenharley.github.io/Day-Planner/
+
+
