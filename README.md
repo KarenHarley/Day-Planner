@@ -1,6 +1,6 @@
 # Day Planner
 
-## Plan and organize your schedule with this helpful tool!
+## Plan and organize your daily schedule and tasks with this helpful tool!
 
 ## Features:
  This Scheduler is color coded to easily identify the current, future and past hours.
@@ -22,7 +22,7 @@
   Are GRAY in color. 
   ![grey color](./pics/gray.png)
 
- You can also add text to a hour and store it!
+ You can also add text to a hour (section) and store it!
 
  ## How to store text:
 
@@ -46,7 +46,7 @@
 KarenHarley88@gmail.com
  
 
- ### Links
+ ### Links:
  
 
 #### Github
