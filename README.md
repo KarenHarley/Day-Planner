@@ -53,10 +53,10 @@ KarenHarley88@gmail.com
 
 #### Github
 
-https://github.com/KarenHarley/Day-Planner
+`https://github.com/KarenHarley/Day-Planner`
 
 #### Website
 
-https://karenharley.github.io/Day-Planner/
+`https://karenharley.github.io/Day-Planner/`
 
 
